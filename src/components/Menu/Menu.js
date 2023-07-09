@@ -4,13 +4,27 @@ import Accueil from '../../../pages/accueil';
 import ParfumA from '../../../pages/parfumA';
 import ParfumB from '../../../pages/parfumB';
 
-
 const Menu = () => {
     const [currentPage, setCurrentPage] = React.useState('accueil');
 
     const handlePageChange = (page) => {
         setCurrentPage(page);
     };
+
+    // On active le rendu cote client pour une page plus interactive
+    /*useEffect(() => {
+        // Effectue une requête API ou un chargement de données côté client
+        // et met à jour l'état avec les données récupérées
+        fetchData();
+    }, []);
+
+    // A utiliser pour plus tard quand il faudra recuperer les donnees clients
+    const fetchData = async () => {
+        // Effectue une requête API ou un chargement de données côté client
+        const response = await fetch('https://api.example.com/data');
+        const data = await response.json();
+        setData(data);
+    }; */
 
     return (
         <div className="flex justify-center pt-1">
