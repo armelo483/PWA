@@ -1,5 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
+import Accueil from '../../../pages/accueil';
+import ParfumA from '../../../pages/parfumA';
+import ParfumB from '../../../pages/parfumB';
+
 
 const Menu = () => {
     const [currentPage, setCurrentPage] = React.useState('accueil');
@@ -46,22 +50,13 @@ const Menu = () => {
             </nav>
             <div className="mt-4">
                 {currentPage === 'accueil' && (
-                    <div id="accueil">
-                        <h1>Page d'accueil</h1>
-                        {/* Ajoutez le contenu de la page d'accueil */}
-                    </div>
+                    <Accueil />
                 )}
                 {currentPage === 'parfumA' && (
-                    <div id="parfumA">
-                        <h1>Parfum A</h1>
-                        {/* Ajoutez le contenu spécifique à Parfum A */}
-                    </div>
+                    <ParfumA />
                 )}
                 {currentPage === 'parfumB' && (
-                    <div id="parfumB">
-                        <h1>Parfum B</h1>
-                        {/* Ajoutez le contenu spécifique à Parfum B */}
-                    </div>
+                    <ParfumB />
                 )}
             </div>
         </div>
